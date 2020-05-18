@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+/*! layout ============================================== */
+
+#timetable {
+	width: 1000px ;
+	margin: 0 auto ;
+	padding: 0 ;
+	}
+
+#timetable header {
+	position: relative ;
+	height: 50px ;
+	background-color: #1d3a62 ;
+	box-shadow: 1px 1px 0px 0px #b2b2b2 ;
+	}
+
+#timetable main {
+	float: none ;
+	width: 950px ;
+	margin: 15px auto ;
+	padding: 14px 24px ;
+	background-color: #f7f7f7 ;
+	border: 1px solid #cdcdcd ;
+	border-right: 1px solid #b2b2b2 ;
+	border-bottom: 1px solid #b2b2b2 ;
+	box-shadow: 1px 1px 0px 0px #d5d5d5 ;
+	}
+
+#timetable aside,
+#timetable footer {
+	display: none ;
+	}
+
+
+/*! header ============================================== */
+
+#timetable header .logo {
+	display: block ;
+	width: 148px ;
+	height: 25px ;
+	margin: 0 ;
+	padding: 14px 0 0 15px ;
+	text-indent: -9999px ;
+	background: url("../gfx/h_logo.png") no-repeat right bottom ;
+	}
+
+#timetable header .close a {
+	display: inline-block ;
+	position: absolute ;
+	top: 15px ;
+	right: 15px ;
+	padding: 3px 25px 0 35px ;
+	background: #1d2e46 url("../gfx/pop_close_off.png") no-repeat 22px 7px ;
+	border-radius: 2px ;
+	font-size: 11px ;
+	color: #f4c255 ;
+	transition: all 0.4s ease-out ;
+	}
+#timetable header .close a:hover {
+	background: #1d2e46 url("../gfx/pop_close_on.png") no-repeat 22px 7px ;
+	text-decoration: none ;
+	color: #f2f2f2 ;
+	}
+
+#timetable header .user,
+#timetable header .logout,
+#timetable header nav {
+	display: none ;
+	}
+
+
+/*! title ============================================== */
+
+#timetable main h1 {
+	width: 943px ;
+	margin: -14px 0 -20px -24px ;
+	padding: 10px 15px 8px 40px ;
+	background: #ebebeb url("../gfx/m_title_h1.png") no-repeat 15px 13px ;
+	border-bottom: 1px solid #c0c0c0 ;
+	font-size: 18px ;
+	line-height: 1.4 ;
+	text-shadow: 1px 1px 2px #bfbfbf;  
+	color: #375177 ;
+	}
+
+#timetable div.box_smart h2 {
+	width: 916px ;
+	margin: 0 0 0 -18px ;
+	}
+
+#timetable div.box_smart h3 {
+	width: 914px ;
+	margin: 0 0 0 0 ;
+	}
+
+
+/*! 時間割 table（共用） ============================================== */
+
+main table.sche td {
+	vertical-align: top ;
+	font-size: 11px ;
+	color: #9e9e9e ;
+	}
+
+main table.sche td hr {
+	height: 0 ;
+	margin: 2px 0 3px ;
+	padding: 0 ;
+	border: 0 ;
+	border-top: 1px dotted #c0c0c0 ;
+	}
+
+main table.sche a:link { color: #69976c ;}
+main table.sche a:visited { color: #69976c ;}
+main table.sche a:hover { color: #ca7921 ; text-decoration:underline ;}
+
+
+/*! 集中講義 list（共用） ============================================== */
+
+main div.sche ul {
+	}
+
+main div.sche ul li {
+	padding: 0 0 0 15px ;
+	color: #9e9e9e ;
+	}
+
+main div.sche ul li a:link,
+main div.sche ul li a:visited {
+	margin-left: -15px ;
+	padding: 0 0 0 15px ;
+	background: url("../gfx/m_link01_off.png") no-repeat left 3px ;
+	color: #69976c ;
+	}
+
+main div.sche ul li a:hover {
+	padding: 0 0 0 15px ;
+	background: url("../gfx/m_link01_on.png") no-repeat left 3px ;
+	color: #ca7921 ;
+	}

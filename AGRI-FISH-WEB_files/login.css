@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/*! bace + title ============================================== */
+
+main#login {
+	float: none ;
+	width: 350px ;
+	margin: 120px auto 0 ;
+	padding: 0 60px 40px ;
+	}
+
+main#login h1 {
+	display: block ;
+	width: 470px ;
+	height: 60px ;
+	margin: 0 0 0 -60px ;
+	padding: 0 ;
+	text-indent: -9999px ;
+	border-bottom: 1px solid #cdcdcd ;
+	background: #1d3a62 url("../gfx/lg_logo.png") no-repeat center center ;
+	}
+	
+main#login h2 {
+	display: block ;
+	width: 75px ;
+	height: 25px ;
+	margin: 30px auto 25px ;
+	padding: 0 ;
+	border: none ;
+	text-indent: -9999px ;
+	background: url("../gfx/lg_title.png") no-repeat center center ;
+	}
+
+
+/*! ID + PW ============================================== */
+
+main#login .id {
+	padding-bottom: 25px ;
+	}
+main#login .pw {
+	padding-bottom: 35px ;
+	}
+
+main#login .id label,
+main#login .pw label {
+	display: block ;
+	width: 50px ;
+	height: 35px ;
+	margin: 0 ;
+	padding: 0 ;
+	text-indent: -9999px ;
+	}
+main#login .id label { background: #999999 url("../gfx/lg_icon01.png") no-repeat center center ;}
+main#login .pw label { background: #999999 url("../gfx/lg_icon02.png") no-repeat center center ;}
+
+
+/*! text ============================================== */
+
+main#login p {
+	clear: both ;
+	padding: 15px 0 0 50px ;
+	font-size: 11px ;
+	}
+
+p.login_note {
+	width: 470px ;
+	margin: 0 auto ;
+	padding: 15px 0 0 0 ;
+	font-size: 11px ;
+	}
+
+p.login_note a {
+	font-weight: bold ;
+	transition: all 0.4s ease-out ;
+	}

@@ -1,0 +1,28 @@
+/**
+ *
+ * infoCommon.js
+ *
+ * お知らせ閲覧共通関数
+ *
+ * @author yuichi@z-gen.co.jp (2005.12)
+ * @version 1.0
+ */
+
+/*
+ * お知らせ詳細表示
+ */
+function doViewInfoDetail(info_cd) {
+	
+	var url = '../../base/info/infoViewDetail.php?info_cd=' + info_cd;
+	var win = window.open(url, 'info_detail', 'width=800,height=700,toolbar=no,status=yes,menubar=no,scrollbars=yes,resizable=yes');
+	win.focus();
+}
+
+/*
+ * これまでのお知らせ一覧表示
+ */
+function doViewAllInfo() {
+
+	var url = '../../base/info/infoViewAllList.php';
+	location.href = url;
+}

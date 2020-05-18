@@ -1,0 +1,12 @@
+jQuery(function($){
+	$('.tabbox > div').hide();
+
+	$('.tabs a').click(function () {
+		$('.tabbox > div').hide().filter(this.hash).fadeIn();
+		
+		$('.tabs a').removeClass('active');
+		$(this).addClass('active');
+		
+		return false;
+	}).filter(':eq(0)').click();
+});

@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+/*! layout ============================================== */
+
+#popup {
+	width: 100% ;
+	margin: 0 auto ;
+	padding: 0 ;
+	}
+
+#popup header {
+	position: relative ;
+	height: 50px ;
+	background-color: #1d3a62 ;
+	box-shadow: 1px 1px 0px 0px #b2b2b2 ;
+	}
+
+#popup main {
+	float: none ;
+	width: 610px ;
+	margin: 15px auto ;
+	padding: 14px 24px ;
+	background-color: #f7f7f7 ;
+	border: 1px solid #cdcdcd ;
+	border-right: 1px solid #b2b2b2 ;
+	border-bottom: 1px solid #b2b2b2 ;
+	box-shadow: 1px 1px 0px 0px #d5d5d5 ;
+	}
+
+#popup aside,
+#popup footer {
+	display: none ;
+	}
+
+
+/*! header ============================================== */
+
+#popup header .logo {
+	display: block ;
+	width: 148px ;
+	height: 25px ;
+	margin: 0 ;
+	padding: 14px 0 0 15px ;
+	text-indent: -9999px ;
+	background: url("../gfx/h_logo.png") no-repeat right bottom ;
+	}
+
+#popup header .close a {
+	display: inline-block ;
+	position: absolute ;
+	top: 15px ;
+	right: 15px ;
+	padding: 3px 25px 0 35px ;
+	background: #1d2e46 url("../gfx/pop_close_off.png") no-repeat 22px 7px ;
+	border-radius: 2px ;
+	font-size: 11px ;
+	color: #f4c255 ;
+	transition: all 0.4s ease-out ;
+	}
+#popup header .close a:hover {
+	background: #1d2e46 url("../gfx/pop_close_on.png") no-repeat 22px 7px ;
+	text-decoration: none ;
+	color: #f2f2f2 ;
+	}
+
+#popup header .user,
+#popup header .logout,
+#popup header nav {
+	display: none ;
+	}
+
+
+/*! title ============================================== */
+
+#popup main h1 {
+	width: 603px ;
+	margin: -14px 0 -20px -24px ;
+	padding: 10px 15px 8px 40px ;
+	background: #ebebeb url("../gfx/m_title_h1.png") no-repeat 15px 13px ;
+	border-bottom: 1px solid #c0c0c0 ;
+	font-size: 18px ;
+	line-height: 1.4 ;
+	text-shadow: 1px 1px 2px #bfbfbf;  
+	color: #375177 ;
+	}
+
+#popup div.box_smart h2 {
+	width: 576px ;
+	margin: 0 0 0 -18px ;
+	}
+
+#popup div.box_smart h3 {
+	width: 574px ;
+	margin: 0 0 0 0 ;
+	}
+
+
+/*! guide ============================================== */
+
+/* guide nav */
+.guide nav {
+	clear: both ;
+	padding-top: 35px ;
+	}
+
+.guide nav ul {
+	padding: 12px ;
+	background-color: #ffffff ;
+	border: 3px double #c0c0c0 ;
+	letter-spacing: -.40em ;
+	}
+
+.guide nav li {
+	display: inline-block ;
+	margin: 0 1px 1px 0 ;
+	letter-spacing: normal ;
+	}
+.guide nav li:last-child { margin-right: 0 ;}
+
+.guide nav li a {
+	display: block ;
+	width: 130px ;
+	padding: 5px 0 2px 14px ;
+	background-color: #556377 ;
+	color: #f2f2f2 ;
+	}
+
+.guide nav li a:hover {
+	background-color: #404040 ;
+	text-decoration:none ;
+	color: #f4c255 ;
+	}
+
+.guide nav li a p {
+	display: inline-block ;
+	padding: 0 0 0 12px ;
+	background: url("../gfx/m_btn_off.png") no-repeat left 5px ;
+	}
+
+/* guide contents */
+
+.guide p {
+	padding: 12px 18px 0 ;
+	}
+
+.guide img {
+	display: block ;
+	margin: 15px auto 0 ;
+	padding: 4px ;
+	border: 1px solid #c0c0c0 ;
+	}

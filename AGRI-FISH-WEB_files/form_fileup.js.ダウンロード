@@ -1,0 +1,43 @@
+$(function(){
+	fileUploader();
+});
+var fileUploader = function(){
+	//ラッパーのdiv
+	var target = $('.fileUploder');
+	
+	//イベント割り当て
+	target.each(function(){
+		//ダミーのテキストフィールド
+		var txt = $(this).find('.txt');
+		//ファイルアップロードボタン
+		var btn = $(this).find('.btn');
+		//input[type=file]の実体
+		var uploader = $(this).find('.uploader');
+
+		//実体が変更された時
+		uploader.bind('change',function(){
+			//テキストフィールドに値をいれる
+			txt.val($(this).val());
+		});
+
+		//ボタンのイベントは無効にしておく
+		btn.bind('click',function(event){
+			//イベントキャンセル
+			event.preventDefault();
+			//一応モダンじゃないブラウザ用
+			return false;
+		});
+		
+		//ホバー処理（上にかぶせているので反応しないため）
+		//ここはデザインの都合上いれている処理のため適宜変更を
+		//class切り替えでやったほうがいいです。
+		$(this).bind('mouseover',function(){
+			btn.css('background-position','0 100%');
+		});
+		$(this).bind('mouseout',function(){
+			btn.css('background-position','0 0');
+		});
+		
+	});
+	
+}

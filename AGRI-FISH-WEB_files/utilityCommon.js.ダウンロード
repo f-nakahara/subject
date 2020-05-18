@@ -1,0 +1,116 @@
+/**
+ *
+ * utilityCommon.js
+ *
+ * ユーティリティ共通関数
+ *
+ * @author yuichi@z-gen.co.jp (2005.12)
+ * @version 1.0
+ */
+
+/**
+ *
+ * ユーザ選択ウィンドウ表示
+ *
+ * ユーザ選択の戻り値を受け取るために、呼び出し側のウィドウは
+ * utilOpenSearchUserCallback(user_id, user_name_kj, opt)
+ * という関数を用意しておく必要がある。
+ *
+ * optに渡した値はそのままコールバック関数に戻されるので、呼び出し元を識別したい場合など、
+ * プログラムの都合に応じて使ってよい。
+ */
+function utilOpenSearchUser(opt) {
+
+//	var url = '../../base/utility/searchUser.php';
+	var url = '../../base/utility/searchUserByKouza.php';
+	if (opt != null) {
+		url += '?opt=' + opt;
+	}
+	var win = window.open(url, 'search_user', 'width=800,height=700,toolbar=no,status=yes,menubar=no,scrollbars=yes,resizable=yes');
+	win.focus();
+}
+
+/**
+ *
+ * ユーザ複数選択ウィンドウ表示
+ *
+ * ユーザ選択の戻り値を受け取るために、呼び出し側のウィドウは
+ * utilOpenSelectUserCallback(user_id_list, user_name_kj_list, opt)
+ * という関数を用意しておく必要がある。
+ *
+ * optに渡した値はそのままコールバック関数に戻されるので、呼び出し元を識別したい場合など、
+ * プログラムの都合に応じて使ってよい。
+ */
+function utilOpenSelectUser(default_id, opt) {
+
+	var url = '../../base/utility/selectUser.php?default_id=' + default_id;
+	if (opt != null) {
+		url += '&opt=' + opt;
+	}
+	var win = window.open(url, 'select_user', 'width=800,height=700,toolbar=no,status=yes,menubar=no,scrollbars=yes,resizable=yes');
+	win.focus();
+}
+
+/**
+ *
+ * 学生検索ウィンドウ表示
+ *
+ * ユーザ選択の戻り値を受け取るために、呼び出し側のウィドウは
+ *   utilOpenSelectGakuseiCallback(gakuseki_no, gakusei_name, opt)
+ *   utilOpenSelectGakuseiMultiCallback(gakuseki_no_list, gakusei_name_list, opt)
+ * という関数を用意しておく必要がある。
+ *
+ * optに渡した値はそのままコールバック関数に戻されるので、呼び出し元を識別したい場合など、
+ * プログラムの都合に応じて使ってよい。
+ */
+function utilOpenSelectGakusei(opt) {
+	utilOpenSelectGakuseiCore(0, 0, opt);
+}
+function utilOpenSelectGakuseiMulti(opt) {
+	utilOpenSelectGakuseiCore(1, 0, opt);
+}
+function utilOpenSelectGakuseiNoSelect(opt) {
+	utilOpenSelectGakuseiCore(0, 1, opt);
+}
+function utilOpenSelectGakuseiCore(multi_flag, nosel_flag, opt) {
+
+	var url = '../../base/utility/selectGakusei.php?multi_flag=' + multi_flag + '&nosel_flag=' + nosel_flag;
+	if (opt != null) {
+		url += '&opt=' + opt;
+	}
+	var win = window.open(url, 'select_gakusei', 'width=950,height=700,toolbar=no,status=yes,menubar=no,scrollbars=yes,resizable=yes');
+	win.focus();
+}
+
+/**
+ *
+ * シラバス選択ウィンドウ表示
+ *
+ * 選択の戻り値を受け取るために、呼び出し側のウィドウは
+ *   utilOpenSelectSyllabusCallback(rec, opt)
+ * という関数を用意しておく必要がある。
+ * recの中身は以下の通り。
+ *   sylb_cd, sylb_abs_cd, sylb_name_kj, sylb_name_kn, sylb_name_en, sylb_make_user_name_kj, syls_week_cd, syls_jigen_cd, sylb_credits
+ *
+ * optに渡した値はそのままコールバック関数に戻されるので、呼び出し元を識別したい場合など、
+ * プログラムの都合に応じて使ってよい。
+ */
+function utilOpenSelectSyllabus(param, opt) {
+
+	var url = '../../base/utility/selectSyllabus.php';
+	var glue = '?';
+	
+	if (param != null) {
+		if (param['need_schedule'] != null) {
+			url += glue + 'need_schedule=' + param['need_schedule'];
+		}
+	}
+	
+	if (opt != null) {
+		url += glue + 'opt=' + opt;
+		glue = '&';
+	}
+	
+	var win = window.open(url, 'select_syllabus', 'width=800,height=700,toolbar=no,status=yes,menubar=no,scrollbars=yes,resizable=yes');
+	win.focus();
+}

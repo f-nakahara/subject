@@ -1,0 +1,112 @@
+/**
+ *
+ * appCommon.js
+ *
+ * アプリケーション共通関数
+ *
+ * @author yuichi@z-gen.co.jp (2005.12)
+ * @version 1.0
+ */
+
+/*
+ * 共通定数
+ */
+var	TAB			= String.fromCharCode(9);
+
+/**
+ *
+ * フォームsubmit
+ *
+ */
+function comDoSubmit(fm) {
+	fm.submit();
+}
+
+/**
+ *
+ * フォームreset
+ *
+ */
+function comDoReset(fm) {
+	fm.reset();
+}
+
+/**
+ *
+ * 戻る
+ *
+ */
+function comDoBack() {
+
+	if (window.opener && (history.length == 0)) comDoClose();
+	else history.back();
+}
+
+/**
+ *
+ * 閉じる
+ *
+ */
+function comDoClose() {
+	window.close();
+}
+
+/**
+ *
+ * シラバス検索
+ *
+ */
+function comDoSearchAndViewSyllabus(nendo) {
+
+	var url = '../../syllabus/search/syllabusSearch.php';
+	var glue = '?';
+	
+	if (nendo != null) {
+		url = url + glue + 'nendo=' + nendo;
+	}
+	
+	var win = window.open(url, 'syllabus_search', 'width=800,height=700,toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes');
+	win.focus();
+}
+
+/**
+ *
+ * ガイド表示
+ *
+ */
+function comDoViewCommonGuide() {
+
+	var url = '../../guide/common/firstGuide.php';
+	var win = window.open(url, 'common_guide', 'width=800,height=700,toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes');
+	win.focus();
+}
+
+/**
+ *
+ * HTML表示
+ *
+ */
+function comDoViewHTML(name, single) {
+
+	if (single == null) {
+		single = 0;
+	}
+	var url = '../../base/htmlgw/htmlgw.php?name=' + name + '&single=' + single;
+	
+	if (single == 1) {
+		var win = window.open(url, 'view_html', 'width=800,height=700,toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes');
+		win.focus();
+	} else {
+		location.href = url;
+	}
+}
+
+/*
+ * 画面初期化
+ */
+function comDoInitScreen() {
+
+	if (window.doInitScreen) {
+		doInitScreen();
+	}
+}

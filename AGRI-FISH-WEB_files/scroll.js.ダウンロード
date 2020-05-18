@@ -1,0 +1,17 @@
+$(function() {
+
+	$(".anc01").click(function () {
+		var i = $(".anc01").index(this)
+		var p = $(".anc_mark01").eq(i).offset().top;
+		$('html,body').animate({ scrollTop: p }, 'fast');
+		return false;
+	});
+	
+	$(".anc02").click(function () {
+		var i = $(".anc02").index(this)
+		var p = $(".anc_mark02").eq(i).offset().top;
+		$('html,body').animate({ scrollTop: p }, 'fast');
+		return false;
+	});
+
+});

@@ -1,0 +1,8 @@
+$(function()
+{
+    $('[placeholder]').ahPlaceholder({
+        placeholderColor : '#a6a6a6',
+        placeholderAttr  : 'placeholder',
+        likeApple        : false
+    });
+});

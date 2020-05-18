@@ -1,0 +1,352 @@
+@charset "UTF-8";
+
+/*! bace ============================================== */
+
+html, body {
+	margin: 0 ;
+	padding: 0 ;
+	background-color: #e6e6e6 ;
+	}
+
+html, body, table {
+	font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, "ＭＳ Ｐゴシック", sans-serif ;
+	font-size: 12px ;
+	line-height: 1.8 ;
+	word-wrap: break-word ;
+	color: #333333 ;
+	}
+
+p, dl, dt, dd, ul, li, th, td {
+	margin: 0 ;
+	padding: 0 ;
+	}
+
+h1, h2, h3, h4, h5, h6, h7 {
+	margin: 0 ;
+	padding: 0 ;
+	font-size: 12px ;
+	line-height: 1 ;
+	}
+
+table { border-collapse: collapse ;}
+ul li img  { vertical-align: top ;}
+ul { list-style: none ;}
+
+
+/*! html5 ie ============================================== */
+
+header, footer, main, aside, nav, menu, section, article, hgroup, figure, figcaption, address, canvas, details, summary {
+	display: block ;
+	margin: 0 ;
+	padding: 0 ;
+	font-style: normal ;
+	}
+
+
+/*! bace link ============================================== */
+
+a { text-decoration: none ;}
+a:link { color: #ca7921 ;}
+a:visited { color: #ca7921 ;}
+a:hover { color: #e55c5c ; text-decoration:underline ;}
+
+main a {
+	transition: all 0.4s ease-out ;
+	-webkit-transition: all 0.4s ease-out ;
+	-moz-transition: all 0.4s ease-out ;
+	-ms-transition: all 0.4s ease-out ;
+	}
+
+a img { border: 0 ;}
+a:hover img {
+	filter:alpha(opacity=70);
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+	}
+
+
+/*! layout ============================================== */
+
+#base {
+	width: 1000px ;
+	margin: 0 auto ;
+	padding: 0 ;
+	}
+
+header {
+	position: relative ;
+	height: 82px ;
+	background-color: #1d3a62 ;
+	box-shadow: 1px 1px 0px 0px #b2b2b2 ;
+	}
+
+main {
+	float: right ;
+	width: 760px ;
+	margin: 12px 0 0 ;
+	padding: 14px 14px 24px ;
+	background-color: #f7f7f7 ;
+	border: 1px solid #cdcdcd ;
+	border-right: 1px solid #b2b2b2 ;
+	border-bottom: 1px solid #b2b2b2 ;
+	box-shadow: 1px 1px 0px 0px #d5d5d5 ;
+	}
+
+aside {
+	float: left ;
+	width: 198px ;
+	margin: 13px 0 0 ;
+	}
+
+footer {
+	float: right ;
+	width: 790px ;
+	padding: 10px 0 20px ;
+	}
+
+
+/*! header ============================================== */
+
+header .logo {
+	display: block ;
+	width: 148px ;
+	height: 25px ;
+	margin: 0 ;
+	padding: 15px 0 0 13px ;
+	text-indent: -9999px ;
+	background: url("../gfx/h_logo.png") no-repeat right bottom ;
+	}
+
+/* user */
+header .user {
+	position: absolute ;
+	top: 12px ;
+	right: 80px ;
+	height: 24px ;
+	padding: 6px 15px 0 ;
+	background-color: #1d2e46 ;
+	border-radius: 2px ;
+	box-shadow: 1px 1px 3px 0px #112d16 inset ;
+	z-index: 999 ;
+	}
+
+header .user p {
+	float: left ;
+	line-height: 1 ;
+	color: #a3d48a ;
+	}
+
+header .user p a {
+	display: inline-block ;
+	height: 17px ;
+	padding: 5px 0 0 30px ;
+	background: url("../gfx/h_user_off.png") no-repeat left 1px ;
+	color: #e6e6e6 ;
+	transition: all 0.8s ease ;
+	}
+
+header .user p a:hover {
+	background: url("../gfx/h_user_on.png") no-repeat left 1px ;
+	text-decoration: none ;
+	color: #f4c255 ;
+	}
+
+/* logout */
+header .logout {
+	position: absolute ;
+	top: 0 ;
+	right: 0 ;
+	background: url("../gfx/h_logout_on.png") no-repeat right bottom ;
+	}
+
+header .logout a {
+	display: block ;
+	width: 65px ;
+	height: 50px ;
+	margin: 0 ;
+	padding: 0 ;
+	text-indent: -9999px ;
+	background: url("../gfx/h_logout_off.png") no-repeat right bottom ;
+	}
+
+#base header .close {
+	display: none ;
+	}
+
+
+/*! header nav ============================================== */
+
+header nav {
+	position: relative ;
+	height: 30px ;
+	margin-top: 11px ;
+	background-color: #404040 ;
+	border-top: 1px solid #2d2d2d ;
+	}
+
+/* home */
+header nav .home {
+	position: absolute ;
+	top: 0 ;
+	left: 0 ;
+	background: url("../gfx/h_home_on.png") no-repeat right 7px ;
+	}
+
+header nav .home a {
+	display: block ;
+	width: 32px ;
+	height: 30px ;
+	margin: 0 ;
+	padding: 0 ;
+	text-indent: -9999px ;
+	background: url("../gfx/h_home_off.png") no-repeat right 7px ;
+	}
+
+/* nav */
+header nav ul {
+	position: absolute ;
+	right: 0 ;
+	z-index: 99 ;
+	}
+
+header nav ul li {
+	float: left ;
+	text-align: center ;
+	line-height: 1 ;
+	}
+
+header nav ul li a:link,
+header nav ul li a:visited {
+	display: block ;
+	width: 130px ;
+	height: 21px ;
+	padding: 9px 10px 0 ;
+	background: url("../gfx/h_nav_line.png") no-repeat left center ;
+	transition: all 0.4s ease-out ;
+	color: #f2f2f2 ;
+	}
+header nav ul li a:hover {
+	background-color: #333333 ;
+	text-decoration:none ;
+	color: #f4c255 ;
+	}
+
+header nav ul li p {
+	display: inline ;
+	padding-left: 14px ;
+	background: url("../gfx/h_nav_point.png") no-repeat left center ;
+	}
+
+
+/*! side ============================================== */
+
+aside nav h3 {
+	margin-top: -1px ;
+	padding: 9px 8px 7px ;
+	background-color: #1d3a62 ;
+	border-left: 5px solid #dfb33c ;
+	box-shadow: 1px 1px 0px 0px #b2b2b2 ;
+	font-size: 11px ;
+	line-height: 1.4 ;
+	font-weight: normal ;
+	color: #f2f2f2 ;
+	}
+
+aside nav ul {
+	margin-top: 1px ;
+	padding-left: 5px ;
+	}
+
+aside nav li {
+	border-bottom: 1px dotted #b2b2b2 ;
+	font-size: 12px ;
+	line-height: 1.4 ;
+	}
+
+aside nav li a:link,
+aside nav li a:visited {
+	display: block ;
+	padding: 9px 15px 7px 8px ;
+	color: #333333 ;
+	background: url("../gfx/s_nav_point_off.png") no-repeat 185px center ;
+	transition: all 0.3s ease-out ;
+	}
+
+aside nav li a:hover {
+	background: #d6d6d6 url("../gfx/s_nav_point_on.png") no-repeat 185px center ;
+	text-decoration: none ;
+	color: #537fa9 ;
+	}
+
+
+/*! page top ============================================== */
+
+footer .ptop {
+	position: fixed ;
+	bottom: -25px ;
+	right: 20px ;
+	}
+
+footer .ptop a:link,
+footer .ptop a:visited {
+	display: block ;
+	width: 40px ;
+	height: 25px ;
+	background-color: #a6a6a6 ;
+	border-radius: 3px 3px 0 0 ;
+	line-height: 30px ;
+	font-size: 11px ;
+	text-align: center ;
+	text-decoration: none ;
+	color: #ffffff ;
+	}
+
+footer .ptop a:hover {
+	background-color: #8d8d8d ;
+	text-decoration: none ;
+	color: #f4c255 ;
+	}
+
+
+/*! footer ============================================== */
+
+footer p {
+	font-size: 11px ;
+	text-align: right ;
+	}
+
+footer p a:link,
+footer p a:visited {
+	color: #536887 ;
+	transition: all 0.4s ease-out ;
+	}
+footer p a:hover {
+	color: #ca7921 ;
+	}
+
+
+/*! clear ============================================== */
+
+.cut,
+main#login div,
+main section,
+main div.box_half,
+main .btn,
+main .btn_h,
+main ul.flow { 
+	zoom: 100%;
+	}
+
+.cut:after,
+main#login div:after,
+main section:after,
+main div.box_half:after,
+main .btn:after,
+main .btn_h:after,
+main ul.flow:after {
+	content: " "; 
+	clear: both; 
+	height: 0; 
+	display: block; 
+	visibility: hidden;
+	}

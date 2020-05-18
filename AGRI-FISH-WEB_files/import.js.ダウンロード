@@ -1,0 +1,40 @@
+// favicon
+document.write('<link rel="shortcut icon" href="'+root+'gfx/favicon.ico">');
+
+// css
+document.write('\
+<link rel="stylesheet" href="'+root+'css/base.css">\
+<link rel="stylesheet" href="'+root+'css/login.css">\
+<link rel="stylesheet" href="'+root+'css/parts.css">\
+<link rel="stylesheet" href="'+root+'css/form.css">\
+<link rel="stylesheet" href="'+root+'css/timetable.css">\
+<link rel="stylesheet" href="'+root+'css/popup.css">\
+<link rel="stylesheet" href="'+root+'css/system_extras.css">\
+');
+
+// javascript
+document.write('\
+<script src="'+root+'js/jquery.js"></script>\
+<script src="'+root+'js/form_jqtransform.js"></script>\
+<script src="'+root+'js/form_jqtransform.ini.js"></script>\
+<script src="'+root+'js/form_fileup.js"></script>\
+<script src="'+root+'js/form_placeholder.js"></script>\
+<script src="'+root+'js/form_placeholder.ini.js"></script>\
+<script src="'+root+'js/tabs.js"></script>\
+<script src="'+root+'js/over_chang.js"></script>\
+<script src="'+root+'js/tdlink.js"></script>\
+<script src="'+root+'js/scroll.js"></script>\
+<script src="'+root+'js/ptop.js"></script>\
+');
+
+// old ie
+document.write('\
+<!--[if lte IE 9]>\
+<script src="'+root+'js/oldie/html5.js"></script>\
+<![endif]-->\
+\
+<!--[if lte IE 8]>\
+<script src="'+root+'js/oldie/css3.js"></script>\
+<link rel="stylesheet" href="'+root+'css/form_ie8.css">\
+<![endif]-->\
+');

@@ -1,0 +1,113 @@
+/**
+ *
+ * syllabusCommon.js
+ *
+ * シラバス共通JS
+ *
+ * @author yuichi@z-gen.co.jp (2005.12)
+ * @version 1.0
+ */
+
+/*
+ * シラバス詳細表示
+ */
+function doViewSyllabus(nendo, sylb_cd, rev, cm) {
+
+	var url = '../../syllabus/view/syllabusViewDetail.php?nendo=' + nendo + '&sylb_cd=' + sylb_cd;
+	if (rev != null) {
+		url = url + '&rev=' + rev;
+	}
+	if (cm != null) {
+		url = url + '&cm=' + cm;
+	}
+	var win = window.open(url, 'syllabus_detail', 'width=800,height=700,toolbar=no,status=yes,menubar=no,scrollbars=yes,resizable=yes');
+	win.focus();
+}
+
+/*
+ * シラバス印刷プレビュー
+ */
+function doPrintPreviewSyllabus(nendo, sylb_cd, rev) {
+
+	var url = '../../syllabus/view/syllabusViewDetail.php?pr=1&nendo=' + nendo + '&sylb_cd=' + sylb_cd;
+	if (rev != null) {
+		url = url + '&rev=' + rev;
+	}
+	var win = window.open(url, 'syllabus_print_preview', 'width=800,height=700,toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes');
+	win.focus();
+}
+
+/*
+ * シラバスチェック表詳細表示
+ */
+function doViewSyllabusCheck(nendo, sylb_cd) {
+
+	var url = '../../syllabus/view/syllabusViewCheckDetail.php?nendo=' + nendo + '&sylb_cd=' + sylb_cd;
+	var win = window.open(url, 'syllabus_check_detail', 'width=800,height=700,toolbar=no,status=yes,menubar=no,scrollbars=yes,resizable=yes');
+	win.focus();
+}
+
+/*
+ * シラバスチェック表印刷プレビュー
+ */
+function doPrintPreviewSyllabusCheck(nendo, sylb_cd) {
+
+	var url = '../../syllabus/view/syllabusViewCheckDetail.php?pr=1&nendo=' + nendo + '&sylb_cd=' + sylb_cd;
+	var win = window.open(url, 'syllabus_check_print_preview', 'width=800,height=700,toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes');
+	win.focus();
+}
+
+/*
+ * モニタリング表詳細表示
+ */
+function doViewMonitoring(nendo, sylb_cd, cm) {
+
+	var url = '../../syllabus/view/syllabusViewMonitoringDetail.php?nendo=' + nendo + '&sylb_cd=' + sylb_cd;
+	if (cm != null) {
+		url = url + '&cm=' + cm;
+	}
+	var win = window.open(url, 'monitoring_detail', 'width=800,height=700,toolbar=no,status=yes,menubar=no,scrollbars=yes,resizable=yes');
+	win.focus();
+}
+
+/*
+ * モニタリング表印刷プレビュー
+ */
+function doPrintPreviewMonitoring(nendo, sylb_cd) {
+
+	var url = '../../syllabus/view/syllabusViewMonitoringDetail.php?pr=1&nendo=' + nendo + '&sylb_cd=' + sylb_cd;
+	var win = window.open(url, 'monitoring_print_preview', 'width=800,height=700,toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes');
+	win.focus();
+}
+
+/*
+ * シラバス編集
+ */
+function doEditSyllabus(nendo, sylb_cd) {
+	var url = '../../syllabus/edit/syllabusEdit.php?nendo=' + nendo + '&sylb_cd=' + sylb_cd;
+	location.href = url;
+}
+
+/*
+ * シラバス提出
+ */
+function doSubmitSyllabus(nendo, sylb_cd) {
+	var url = '../../syllabus/submit/syllabusSubmit.php?nendo=' + nendo + '&sylb_cd=' + sylb_cd;
+	location.href = url;
+}
+
+/*
+ * シラバス承認
+ */
+function doApproveSyllabus(nendo, sylb_cd) {
+	var url = '../../syllabus/approve/syllabusApprove.php?nendo=' + nendo + '&sylb_cd=' + sylb_cd;
+	location.href = url;
+}
+
+/*
+ * シラバス承認取消
+ */
+function doCancelApproveSyllabus(nendo, sylb_cd) {
+	var url = '../../syllabus/approve/syllabusCancelApprove.php?nendo=' + nendo + '&sylb_cd=' + sylb_cd;
+	location.href = url;
+}

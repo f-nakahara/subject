@@ -1,0 +1,119 @@
+/**
+ *
+ * inputCheck.js
+ *
+ * 入力チェック共通関数
+ *
+ * @author yuichi@z-gen.co.jp (2005.12)
+ * @version 1.0
+ *
+ * 2005-05-15	1.0.0
+ * 2006-01-06	1.0.1	全角カタカナチェックを追加。
+ */
+
+/**
+ *
+ * 入力チェック（必須）
+ *
+ */
+function check_input( obj, name ) {
+
+	if ( obj.value == '' ) {
+		alert( name + 'を入力してください。' );
+		obj.focus();
+		return false;
+	}
+	return true;
+}
+
+/**
+ *
+ * 入力チェック（選択）
+ *
+ */
+function check_selected( obj, name ) {
+
+	var val = '';
+	
+	if ( obj.selectedIndex >= 0 ) {
+		val = obj[ obj.selectedIndex ].value;
+	}
+	
+	if ( val == '' ) {
+		alert( name + 'を選択してください。' );
+		obj.focus();
+		return false;
+	}
+	return true;
+}
+
+/**
+ *
+ * 入力チェック（半角数字）
+ *
+ */
+function check_numeric( obj, name ) {
+
+	if ( obj.value.match( /[^0-9]/ ) ) {
+		alert( name + 'には半角数字を入力してください。' );
+		obj.focus();
+		return false;
+	}
+	return true;
+}
+
+/**
+ *
+ * 入力チェック（ラジオボタン）
+ *
+ */
+function check_radio( obj, name ) {
+
+	var i, found = '';
+	
+	for ( i = 0; i < obj.length; i++ ) {
+		if ( obj[i].checked ) {
+			found = obj[i].value;
+			break;
+		}
+	}
+	
+	if ( ! found ) {
+		alert( name + 'を選択してください。' );
+		obj[0].focus();
+		return false;
+	}
+	
+	return found;
+}
+
+/**
+ *
+ * 入力チェック（全角カタカナ）
+ *
+ */
+function check_katakana( obj, name ) {
+
+	if ( obj.value.match( /[^ア-ン,"ー","ヴ","ァ","ィ","ゥ","ェ","ォ","ャ","ュ","ョ","ヮ","ヰ","ヱ","　"]/g ) ) {
+		alert( name + 'には全角カタカナを入力してください。' );
+		obj.focus();
+		return false;
+	}
+	return true;
+}
+
+
+/*
+ * selectに値をセット
+ */
+function set_select( obj, value ) {
+
+	var	i;
+	
+	for (i = 0; i < obj.length; i++) {
+		if (obj[i].value == value) {
+			obj.selectedIndex = i;
+			break;
+		}
+	}
+}

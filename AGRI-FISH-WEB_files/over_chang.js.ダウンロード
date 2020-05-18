@@ -1,0 +1,15 @@
+$(document).ready(function(){
+
+         $('header .logout a').hover(function(){
+		         $(this).stop().animate({'opacity' : '0'}, 350);
+		 }, function(){$(this).stop().animate({'opacity' : '1'}, 800);});
+		 
+         $('header nav .home a').hover(function(){
+		         $(this).stop().animate({'opacity' : '0'}, 350);
+		 }, function(){$(this).stop().animate({'opacity' : '1'}, 800);});
+		 		 
+         $('.chang').hover(function(){
+		         $(this).stop().animate({'opacity' : '0'}, 350);
+		 }, function(){$(this).stop().animate({'opacity' : '1'}, 800);});
+
+});

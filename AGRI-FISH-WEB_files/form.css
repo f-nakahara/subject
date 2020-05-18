@@ -1,0 +1,396 @@
+/*! bace ============================================== */
+
+header form,
+main form,
+main#login form {
+	margin: 0 ;
+	padding: 0 ;
+	}
+
+input, textarea, select, option {
+	font-size: 12px ;
+	line-height: 1.8 ;
+	color: #333333 ;
+	}
+
+::-webkit-input-placeholder { color: #a6a6a6 ;}
+:-ms-input-placeholder { color: #a6a6a6 ;}
+:-moz-placeholder { color: #a6a6a6 ;}
+
+
+/*! Label + txt ============================================= */
+
+header form.JPlabel label,
+main form.JPlabel label {
+	margin-right: 8px ;
+	display: block ;
+	float: left ;
+	}
+
+/* form 並びテキスト */
+main em {
+	display: inline-block ;
+	padding: 6px 0 0 ;
+	font-style: normal ;
+	}
+
+main em.right {
+	display: inline-block ;
+	padding: 6px 0 0 10px ;
+	font-style: normal ;
+	}
+
+main em.left {
+	display: inline-block ;
+	float: left ;
+	padding: 6px 10px 0 0 ;
+	font-style: normal ;
+	}
+
+main em.lr {
+	display: inline-block ;
+	padding: 6px 10px 0 ;
+	font-style: normal ;
+	}
+
+
+/*! Inputs ============================================= */
+
+main input[type=text],
+main input[type=password] {
+	box-sizing: border-box ;
+	width: 100% ;
+	height: 28px ;
+	padding: 0 10px ;
+	border: 1px solid #b2b2b2 ;
+	background-color: #f0f0f0 ;
+	}
+main input[type=text].size,
+main input[type=password].size {
+	width: auto ;
+	}
+
+main input[type=text]:hover,
+main input[type=password]:hover {
+	border: 1px solid #9dbbd1 ;
+	background-color: #f0f5f7 ;
+	}
+
+main input[type=text]:focus,
+main input[type=password]:focus {
+	border: 1px solid #9dbbd1 ;
+	background-color: #f7f7f7 ;
+	}
+
+
+/*! Inputs（login） ============================================= */
+
+main#login input[type=text],
+main#login input[type=password] {
+	box-sizing: border-box ;
+	width: 300px ;
+	height: 35px ;
+	padding: 0 10px ;
+	border: 1px solid #b2b2b2 ;
+	background-color: #f0f0f0 ;
+	}
+
+main#login input[type=text]:hover,
+main#login input[type=password]:hover {
+	border: 1px solid #9dbbd1 ;
+	background-color: #f0f5f7 ;
+	}
+
+main#login input[type=text]:focus,
+main#login input[type=password]:focus {
+	border: 1px solid #9dbbd1 ;
+	background-color: #f7f7f7 ;
+	}
+
+
+/*! Textarea ============================================= */
+
+main textarea {
+	box-sizing: border-box ;
+	width: 100% ;
+	padding: 5px 10px ;
+	border: 1px solid #b2b2b2 ;
+	background-color: #f0f0f0 ;
+	line-height: 1.5 ;
+	resize: none ;
+	}
+main textarea.size {
+	width: auto ;
+	}
+/* webkit */
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	main textarea {
+		margin-bottom: -4px ;
+	}
+}
+
+main textarea:hover {
+	border: 1px solid #9dbbd1 ;
+	background-color: #f0f5f7 ;
+	}
+
+main textarea:focus {
+	border: 1px solid #9dbbd1 ;
+	background-color: #f7f7f7 ;
+	}
+
+
+/*! Checkboxes ============================================= */
+
+main span.JPcheckboxW {
+	display: block ;
+	float: left ;
+	margin: 3px 4px 0 0 ;
+	}
+main td.sin span.JPcheckboxW { margin: 0 4px ;}
+
+main a.JPcheckbox {
+	display: block ;/* display: -moz-inline-block; */
+	width: 15px ;
+	height: 15px ;
+	background: transparent url("../gfx/fm_check_off.png") no-repeat center top ;
+	vertical-align: middle ;
+	}
+
+/*  Checked */
+main a.JPcheckboxchecked { background: transparent url("../gfx/fm_check_on.png") no-repeat center top ;}
+
+/*  Checkboxes list */
+main ul.checklist li {
+	clear: both ;
+	margin: 0 ;
+	}
+
+
+/*! Radios ============================================= */
+
+main .JPradioW {
+	float: left ;
+	display: block ; 
+	margin: 3px 4px 0 0 ;
+	}
+main td.sin span.JPradioW { margin: 0 4px ;}
+
+main .JPradio {
+	display: block ;/* display: -moz-inline-block; */
+	width: 16px ;
+	height: 16px ;
+	background: transparent url("../gfx/fm_radio_off.png") no-repeat center top ;
+	vertical-align: middle ;
+	}
+
+/*  Checked */
+main a.JPradiochecked { background: transparent url("../gfx/fm_radio_on.png") no-repeat center top ;}
+
+
+/*! Selects ============================================= */
+
+main .JPselect {
+	position: relative ;
+	height: 28px ;
+	background: url("../gfx/fm_select_left.png") no-repeat top left ;
+	float: left ;
+	text-align: left ;
+	z-index: 1 ;
+	}
+
+main .JPselect div span {
+	position: absolute ;
+	float: none ;
+	white-space: nowrap ;
+	height: 20px ;
+	padding: 7px 0 0 11px ;
+	overflow: hidden ;
+	line-height: 1.3 ;
+	cursor: pointer ;
+	}
+/* webkit */
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	main .JPselect div span {
+		padding: 8px 0 0 10px ;
+	}
+}
+
+main .JPselect a.JPselectOpen {
+	position: absolute ;
+	display: block ;
+	right: 0 ;
+	width: 28px ;
+	height: 28px ;
+	background: url("../gfx/fm_select_right.png") no-repeat center center;
+	}
+
+main .JPselect ul {
+	display: none ;
+	position: absolute ;
+	top: 27px ;
+	left: 0 ;
+	border: solid 1px #c0c0c0 ;
+	margin: 0 ;
+	padding: 0 ;
+	overflow: auto ;
+	overflow-y: auto ;
+	z-index: 1 ;
+	}
+
+main .JPselect ul a {
+	display: block ;
+	padding: 4px 5px 2px 10px ;
+	background-color: #f2f2f2	;
+	font-size: 11px ;
+	text-decoration: none ;
+	color: #333333 ;
+	transition: all 0.3s ease-out ;
+	}
+
+main .JPselect ul a.selected {
+	background: #1d3a62 ;
+	color: #a6caea ;
+	}
+
+main .JPselect ul a:hover,
+main .JPselect ul a.selected:hover {
+	background: #999999 ;
+	color: #f2f2f2 ;
+	}
+
+
+/*! Buttons ============================================= */
+
+main button.JPbutton {
+	margin: 0 ;
+	padding: 0 ;
+	border: none ;
+	background-color: transparent ;
+	cursor: pointer ;
+	overflow: visible ;
+	}
+
+main button.JPbutton span {
+	display: block ;
+/* float: left ; */
+	height: 28px ;
+	margin: 0 ;
+	padding: 0 10px 0 0 ; /* sliding doors padding */
+	background: transparent url("../gfx/fm_btn_right_off.png") no-repeat right top ;
+	transition: all 0.3s ease-out ;
+	}
+
+main button.JPbutton span span {
+	display: block ;
+	height: 19px ;
+	margin: 0 ;
+	padding: 9px 10px 0 20px ;
+	background: transparent url("../gfx/fm_btn_left_off.png") no-repeat top left ;
+	font-size: 12px;
+	line-height: 1 ;
+	text-decoration: none ;
+	color: #795c3a ;
+	transition: all 0.3s ease-out ;
+	}
+
+/* hover */
+main button.JPbutton_hover span span {
+	background: transparent url("../gfx/fm_btn_left_on.png") no-repeat top left ;
+	color: #6b8ebe ;
+	}
+main button.JPbutton_hover span {
+	background: transparent url("../gfx/fm_btn_right_on.png") no-repeat top right ;
+	color: #6b8ebe ;
+	}
+
+/* clicked */
+main button.JPbutton_click span span {
+	background: transparent url("../gfx/fm_btn_left_act.png") no-repeat top left ;
+	color: #795c3a ;
+	}
+main button.JPbutton_click span {
+	background: transparent url("../gfx/fm_btn_right_act.png") no-repeat top right ;
+	color: #795c3a ;
+	}
+
+/* layout */
+main form button.fspw { margin: 0 5px ;}
+main form button.fsph { margin: 5px 0 ;}
+main form button.fspt { margin: 5px 0 0 ;}
+main form button.fspb { margin: 0 0 5px ;}
+main form button.fspl { margin: 0 0 0 5px ;}
+main form button.fspr { margin: 0 5px 0 0 ;}
+main form button.fspm { margin: 5px ;}
+
+
+/*! Buttons（login） ============================================= */
+ 
+main#login button.JPbutton {
+	margin: 0 ;
+	}
+
+main#login button.JPbutton span {
+	height: 40px ;
+	background: #dfb33c url("../gfx/lg_btn_right_off.png") no-repeat right top ;
+	}
+
+main#login button.JPbutton span span {
+	height: 32px ;
+	width: 329px ;
+	padding: 8px 4px 0 8px ;
+	background: #dfb33c url("../gfx/lg_btn_left_off.png") no-repeat left top ;
+	font-size: 14px;
+	font-weight: bold ;
+	line-height: 1.7 ;
+	color: #7d4f0a ;
+	}
+
+/* hover */
+main#login button.JPbutton_hover span span { background: #d5a31b url("../gfx/lg_btn_left_on.png") no-repeat left top ;}
+main#login button.JPbutton_hover span { background: #d5a31b url("../gfx/lg_btn_right_on.png") no-repeat right top ;}
+
+/* clicked */
+main#login button.JPbutton_click span span { background: #f4c034 url("../gfx/lg_btn_left_act.png") no-repeat left top ;}
+main#login button.JPbutton_click span { background: #f4c034 url("../gfx/lg_btn_right_act.png") no-repeat right top ;}
+
+
+/*! file up ============================================= */
+
+main .fileUploder {
+	position: relative ;
+	display: inline-block ;
+	height: 28px ;
+	margin-right: 20px ;
+	overflow: hidden ;
+	cursor: pointer ;
+	}
+
+main .fileUploder .filetxt {
+	width: 180px ;
+	margin-right: 5px ;
+	vertical-align: top ;
+	}
+
+main .fileUploder .uploader {
+	position: absolute ;
+	top: 0 ;
+	right: 0 ;
+	z-index: 99 ;
+	width: 100% ;
+	height: 100% ;
+	/*↓ここでフォームアイテムの大きさを調整。IE対策*/
+	font-size:315px;
+	filter:alpha(opacity=0);
+	-moz-opacity: 0;
+	opacity: 0;
+	}
+
+
+/*! original form clear ============================================= */
+
+header .JPhidden,
+main .JPhidden,
+main#login .JPhidden {
+	display: none ;
+	}
